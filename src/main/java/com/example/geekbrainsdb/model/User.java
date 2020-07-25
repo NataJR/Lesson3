@@ -10,15 +10,25 @@ import javax.persistence.Table;
 public class User {
 
     @Id
-    private Long id;
+    private int id;
     private String name;
+    private int age;
     private String email;
 
-    public Long getId() {
+    public User() { }
+
+    public User(int id, String name, int age, String email) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.email = email;
+    }
+
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -30,6 +40,14 @@ public class User {
         this.name = name;
     }
 
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
     public String getEmail() {
         return email;
     }
@@ -38,11 +56,11 @@ public class User {
         this.email = email;
     }
 
-    @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
+                ", age=" + age +
                 ", email='" + email + '\'' +
                 '}';
     }
