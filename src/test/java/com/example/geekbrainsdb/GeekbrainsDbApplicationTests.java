@@ -21,7 +21,7 @@ class GeekbrainsDbApplicationTests {
     @Transactional
     void contextLoads() {
         User nikolay = new User();
-        nikolay.setId(99999L);
+        nikolay.setId(99999);
         nikolay.setName("Kolya");
         nikolay.setEmail("kolya@gmail.ru");
 
